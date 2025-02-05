@@ -68,11 +68,14 @@
         let yesButton = document.getElementById("yes");
         let size = 18;
 
-        noButton.addEventListener("mouseover", function() {
+        function increaseYesSize() {
             size += 10;
             yesButton.style.fontSize = size + "px";
             yesButton.style.padding = (size / 2) + "px " + (size) + "px";
-        });
+        }
+
+        noButton.addEventListener("mouseover", increaseYesSize);
+        noButton.addEventListener("click", increaseYesSize);
 
         yesButton.addEventListener("click", function() {
             document.body.innerHTML = "<h1 style='font-size:50px;color:red;'>YAY! Can't wait for our date! 😍❤️</h1>" +
