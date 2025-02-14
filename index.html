@@ -3,84 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine?</title>
+    <title>Valentine's Invite</title>
     <style>
         body {
             text-align: center;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: pink;
         }
         .container {
-            margin-top: 100px;
+            margin-top: 50px;
         }
-        .question {
-            font-size: 24px;
-            font-weight: bold;
-            color: red;
+        .hidden {
+            display: none;
         }
-        .buttons {
+        .game-section {
             margin-top: 20px;
         }
-        #yes {
-            font-size: 18px;
+        button {
             padding: 10px 20px;
+            font-size: 18px;
             background-color: red;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 10px;
+            margin-top: 10px;
         }
-        #no {
-            font-size: 18px;
-            padding: 10px 20px;
-            background-color: white;
-            color: red;
-            border: 2px solid red;
-            cursor: pointer;
-            border-radius: 10px;
+        #yes-button {
+            transition: transform 0.3s ease;
+        }
+        #message {
+            margin-top: 10px;
+            font-size: 20px;
+            color: darkred;
+        }
+        #final-section {
+            margin-top: 20px;
+        }
+        video {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .heart { 
+            display: inline-block; 
+            font-size: 30px; 
+            cursor: pointer; 
+            margin: 5px;
             position: absolute;
         }
-        .clipart {
-            margin-top: 20px;
-        }
-        .gif-container {
-            margin-top: 20px;
+        audio {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-lovely.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
     
-    <div class="container">
-        <h1 class="question">Will you be my Valentine? 💖</h1>
-        <img src="https://media.tenor.com/O1Zk8YvgJ-EAAAAi/peach-goma-peach.gif" alt="Cute Valentine GIF" class="clipart" width="200">
-        <div class="buttons">
-            <button id="yes">Yes! ❤️</button>
-            <button id="no">No 😢</button>
+    
+    <div class="container" id="page1">
+        <img src="https://i.imgur.com/QUj3zxW.jpg" width="60%" style="border-radius: 10px; margin-top: 20px;">
+        <h1>❤️ A letter to my love.... ❤️</h1>
+        <p>Hey baby, I want to tell you a story of how much it means to me to have someone like you in my life. </p>
+      <p> This story goes back to the day I first met you, in my "Kia Soul", The first time I laid my eyes on you, the first time you entered the car with a big smile </p>
+      <p> I knew.... you'd be the one</p>
+      <p>The first day with you I was hella nervous, I mean I had a REALLY pretty girl sitting right beside me and I couldn't wait to spend some quality time with her.</p>
+      <p>quality time? I think I have never had such an outstanding company in my life. YOU being there with me really elevated the fun I had the whole day.</p>
+      <p>Honestly, I was hella satisfied with how well our time went. but to my surprise, god had other plans </p>
+      <p> I think I can never forget the last day of our trip, the feeling was just OUT. OF. THIS. WORLD. the time we spent on the roof of London House to the drive back home to the...</p>
+     <p>Kiss, in the car on YOU</p>
+      <p> That moment just made the first ever trip we had out of this world.</p>
+      <p> I'll keep this website on for eternity and mark it on the map where I had the best kisses of my life with you</p>
+      <img src="https://i.imgur.com/zabRMoi.jpg" width="60%" style="border-radius: 10px; margin-top: 20px;">
+      <div class="game-section">
+            <p>Click the moving heart!</p>
+            <span class="heart" id="heart1" onclick="winGame1()">❤️</span>
+            <p id="game1-result" class="hidden">You won! 🎉</p>
         </div>
     </div>
 
-    <script>
-        let noButton = document.getElementById("no");
-        let yesButton = document.getElementById("yes");
-        let size = 18;
+    <div class="container hidden" id="page2">
+        <h1>💖 From that day on... 💖</h1>
+        <img src="https://i.imgur.com/PNEzedN.jpg" width="300px">
+        <p>Every Single day has been the best days of my life, </p>
+      <p>From Buc-ee's sword fights (I know, that sounds so wrong 😆) and road trips to attending concerts together and driving you home when you're drunk—every memory we've made is priceless. I truly can't forget a single moment with you.
 
-        function increaseYesSize() {
-            size += 10;
-            yesButton.style.fontSize = size + "px";
-            yesButton.style.padding = (size / 2) + "px " + (size) + "px";
+Our first Texas trip showed me not just how amazing of a cook you are, but also what an incredible partner you could be. Every time I went to the office while you stayed home, I missed you so much—I just wanted to rush back and hug you for hours.
+
+I love trying new foods with you, discovering new places, and making them our go-to spots until I eventually get bored. I cherish your fresh perspective on life, and I enjoy every single moment of it with you. 💖 </p>
+      <p>I want to be able to continue this adventure with you for the rest of my life (fingers crossed). I really see a good future for us. I'll tell you now and I'll tell you every single day - You motivate me, inspire me, cherish me, make me love you, and want to be loved by you. You an amazing gift to me. </p>  
+      <p> Also, I'm aware that we disagree on some sensitive issues and of course, we have our fair share of conflicts. I want to assure you that no matter what, I'll be here for you. I'm not going anywhere. You make me feel things I only dreamt of. you make my life feel like a dream worth living the rest of my life</p>
+     <p>A tribute to my love towards you, I want to add my most favorite pictures of you and together</p>
+      <img src="https://i.imgur.com/HJH3H4u.jpg" width="60%" style="border-radius: 10px; margin-top: 20px;">
+      <button onclick="nextPage(4)">Next</button>
+    </div>
+
+    
+    </div>
+
+    <div class="container hidden" id="page4">
+        <h1>💞 The Final Question 💞</h1>
+        <img src="https://i.imgur.com/z1fTyZC.gif" width="300px">
+        <p>I love you and I wish to spend as many years as possible and beyond 💘 I want to kneel down to you and ask you something......</p>
+        <div class="game-section">
+            <p>Will you be my Valentine? 💘</p>
+            <button id="yes-button" onclick="showFinalSection()">Yes</button>
+            <button onclick="growYesButton()">No</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <div class="container hidden" id="final-section">
+        <video autoplay controls>
+            <source src="https://i.imgur.com/X120gx0.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Thank you for being my Valentine! 💖 You make my world so special!</p>
+    </div>
+
+    <script>
+        function nextPage(page) {
+            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
+            document.getElementById('page' + page).classList.remove('hidden');
         }
 
-        noButton.addEventListener("mouseover", increaseYesSize);
-        noButton.addEventListener("click", increaseYesSize);
+        function moveHeart() {
+            let heart = document.getElementById("heart1");
+            let x = Math.random() * (window.innerWidth - 50);
+            let y = Math.random() * (window.innerHeight - 50);
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+        }
+        setInterval(moveHeart, 1000);
 
-        yesButton.addEventListener("click", function() {
-            document.body.innerHTML = "<h1 style='font-size:50px;color:red;'>YAY! Can't wait for our date! 😍❤️</h1>" +
-                "<div class='gif-container'><img src='https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa21rMnMwNWY2NWpycHA1Mnpwang5YjJxbjhiMDkza2NyajA3eG90bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KztT2c4u8mYYUiMKdJ/giphy.gif' alt='Cute Valentine GIF' width='300'></div>";
-        });
+        function winGame1() {
+            document.getElementById('game1-result').classList.remove('hidden');
+            setTimeout(() => nextPage(2), 2000);
+        }
+        
+        function winGame3() {
+            document.getElementById('game3-result').classList.remove('hidden');
+            setTimeout(() => nextPage(4), 2000);
+        }
+        
+        function revealHeart() {
+            document.getElementById('hidden-heart').classList.remove('hidden');
+        }
+        
+        let yesButtonSize = 1;
+        let messages = ["Pretty pleaseeee?", "Are you sure? 🥺", "I really, really want you to say yes! 😍", "You know you want to! 💘"];
+        let messageIndex = 0;
+
+        function growYesButton() {
+            yesButtonSize += 0.3;
+            document.getElementById('yes-button').style.transform = `scale(${yesButtonSize})`;
+            if (messageIndex < messages.length) {
+                document.getElementById('message').textContent = messages[messageIndex++];
+            }
+        }
+        
+        function showFinalSection() {
+            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
+            document.getElementById('final-section').classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
+
